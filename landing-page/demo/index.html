@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIS NIDAAN - Platform Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0B2A5B',
+                        trustblue: '#1F5FBF',
+                        skymist: '#EAF2FF',
+                        ink: '#101828',
+                        slate: '#475467',
+                        cloud: '#F9FAFB',
+                        mist: '#E5E7EB'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cloud font-sans text-ink min-h-screen flex flex-col selection:bg-trustblue selection:text-white">
+
+    <!-- Sticky Navbar from Landing Page -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-mist/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 md:h-20">
+                <a href="/" class="flex items-center gap-2 cursor-pointer hover:opacity-90">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" class="text-trustblue"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+                    <span class="text-xl font-bold text-navy tracking-tight">BIS Nidaan</span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="/demo" class="text-trustblue font-bold">Demo Video</a>
+                    <a href="/#features" class="text-slate font-medium hover:text-trustblue transition-colors">Features</a>
+                    <a href="/#how-it-works" class="text-slate font-medium hover:text-trustblue transition-colors">How it works</a>
+                    <div class="h-6 w-px bg-mist"></div>
+                    <a href="/consumer" class="bg-trustblue text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-navy transition-all shadow-md hover:shadow-lg">Verify a Product</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-4xl mx-auto px-6 flex-1 flex flex-col justify-center items-center py-16">
+        
+        <div class="text-center mb-10">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-navy tracking-tight mb-4">
+                See NIDAAN in Action.
+            </h1>
+            <p class="text-slate text-base md:text-lg max-w-2xl mx-auto">
+                Watch how NIDAAN verifies products, ensures authenticity via Hyperledger, and simplifies onboarding.
+            </p>
+        </div>
+
+        <!-- Video Container -->
+        <div class="w-full aspect-video bg-black rounded-2xl overflow-hidden shadow-xl border border-mist/50">
+            <!-- Replace the video ID 'dQw4w9WgXcQ' below with your actual YouTube Video ID! -->
+            <iframe 
+                class="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&rel=0&modestbranding=1" 
+                title="BIS NIDAAN Platform Demo" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        
+        <div class="mt-12 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
+             <a href="/consumer" class="w-full sm:w-auto text-center bg-trustblue text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:bg-navy transition-all shadow-md hover:shadow-lg">
+                 Try Consumer Portal
+             </a>
+             <a href="/manufacturer" class="w-full sm:w-auto text-center bg-white text-slate border border-mist px-8 py-3.5 rounded-xl font-semibold text-base hover:border-trustblue hover:text-trustblue hover:bg-skymist transition-all shadow-sm hover:shadow-md">
+                 Manufacturer Portal
+             </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-8 text-center text-slate text-sm border-t border-mist bg-white mt-auto">
+        &copy; 2024 Bureau of Indian Standards. All rights reserved.
+    </footer>
+</body>
+</html>
